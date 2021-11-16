@@ -1,0 +1,30 @@
+{
+  "name": "mocha_sandbox",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "lint": "eslint src test"
+  },
+  "author": "Armin Basirian <ar.basirian@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/plugin-proposal-private-methods": "^7.2.1",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/register": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "chai": "^4.1.2",
+    "eslint": "^6.0.0",
+    "eslint-config-codingitwrong": "^0.1.2",
+    "mocha": "^6.0.2",
+    "sinon": "^7.2.2",
+    "sinon-chai": "^3.2.0"
+  },
+  "dependencies": {
+    "mocha-junit-reporter": "^1.18.0"
+  }
+}
