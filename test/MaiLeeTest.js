@@ -3,7 +3,7 @@ import {
   Calculator,
   ScientificCalculator,
   withSummation,
-} from "../src/Morino";
+} from "../src/MaiLee";
 
 /**
  * 1. Write a Calculator class that matches this specification
