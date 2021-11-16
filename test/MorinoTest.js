@@ -5,6 +5,9 @@ import {
   withSummation,
 } from "../src/Morino";
 
+/**
+ * 1. Write a Calculator class that matches this specification
+ */
 describe("Calculator", function () {
   let calculator;
 
@@ -173,6 +176,8 @@ describe("AsBusinessCalculator", function () {
   });
 
   it("should provide a string description", function () {
-    expect(Object.prototype.toString.call(calculator)).to.equal("a");
+    expect(Object.prototype.toString.call(calculator)).to.equal(
+      "[object BusinessCalculator]"
+    );
   });
 });
