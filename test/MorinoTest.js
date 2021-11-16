@@ -3,7 +3,7 @@ import {
   Calculator,
   ScientificCalculator,
   withSummation,
-} from "../src/calc";
+} from "../src/Morino";
 
 describe("Calculator", function () {
   let calculator;
