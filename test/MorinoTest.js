@@ -168,9 +168,10 @@ describe("AsBusinessCalculator", function () {
 
   it("returns the simple interest", function () {
     let r;
+
     expect(calculator).to.have.property("simpleInterest").that.is.a("function");
     r = 5.5; // 5.5% rate
-    expect(calculator.simpleInterest(p, r, t)).to.equal(p(r / 100), t);
+    expect(calculator.simpleInterest(p, r, t)).to.equal(p * (r / 100) * t);
     r = 4.3; // 4.3% rate
     expect(calculator.simpleInterest(p, r, t)).to.equal(30.1);
   });
