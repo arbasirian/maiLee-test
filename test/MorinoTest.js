@@ -115,6 +115,7 @@ describe("Calculator.calculate", function () {
   it("returns a promise", function (done) {
     const callDone = () => done(),
       calculating = calculator.calculate(() => void 0);
+
     expect(calculating).to.be.instanceOf(Promise);
     calculating.then(callDone).catch(callDone);
   });

@@ -17,23 +17,16 @@ export class Calculator {
     }
     return num1 / num2;
   }
-  calculate(fn) {
-    Promise(async (resolve, reject) => {
-      try {
-        const res = await fn();
-        return resolve(res);
-      } catch (err) {
-        return reject(err);
+  calculate = (fn) => {
+    return new Promise((resolve, reject) => {
+      if (!fn) {
+        reject(NaN);
       }
+
+      const result = fn();
+      resolve(result);
     });
-  }
-  // calculate = async () => {
-  //   try {
-  //     await 1;
-  //   } catch (error) {
-  //     throw error;
-  //   }
-  // };
+  };
 }
 
 export class ScientificCalculator extends Calculator {
@@ -41,7 +34,6 @@ export class ScientificCalculator extends Calculator {
     return "ScientificCalculator";
   }
   sin(deg) {
-    console.log(Math.sin(Math.PI / 2));
     return Math.sin(deg);
   }
   cos(deg) {
@@ -61,14 +53,6 @@ export const withSummation = () => {
     return params.reduce((a, c) => calculator.add(a, c), 0);
   };
 };
-
-// export const AsBusinessCalculator = (classObj) => {
-//   const calculator = classObj;
-//   calculator.prototype.simpleInterest = function (p, r, t) {
-//     return Number((p * (r / 100) * t).toFixed(1));
-//   };
-//   return calculator;
-// };
 
 export const AsBusinessCalculator = (referenceClass) => {
   return class Sample extends referenceClass {
