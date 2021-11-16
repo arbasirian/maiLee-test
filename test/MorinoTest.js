@@ -33,7 +33,9 @@ describe("Calculator", function () {
   });
 
   it("should provide a string description", function () {
-    expect(Object.prototype.toString.call(calculator)).to.equal("a");
+    expect(Object.prototype.toString.call(calculator)).to.equal(
+      "[object Calculator]"
+    );
   });
 });
 
@@ -69,7 +71,9 @@ describe("ScientificCalculator", function () {
   });
 
   it("should provide a string description", function () {
-    expect(Object.prototype.toString.call(calculator)).to.equal("a");
+    expect(Object.prototype.toString.call(calculator)).to.equal(
+      "[object ScientificCalculator]"
+    );
   });
 });
 
